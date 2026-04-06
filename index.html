@@ -150,11 +150,11 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 120px;
-  z-index: 1;
+  width: 180px;
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
-  opacity: 0.25;
+  opacity: 0.85;
 }
 
 .flores img {
@@ -162,24 +162,28 @@
   width: auto;
   display: block;
 }
-.section,
-.bloque,
-.calendar,
-.portal {
-  position: relative;
-  z-index: 2;
+
+.izquierda {
+  left: 0;
 }
-    
+
+.derecha {
+  right: 0;
+}
+
+.derecha img {
+  transform: scaleX(-1);
+}
 @media (max-width: 768px) {
   .flores {
-  width: 70px;
-  opacity: 0.18;
-}
+    width: 70px;
+    opacity: 0.55;
+    z-index: -1;
+  }
 
   .flores img {
     height: 100%;
   }
-
   .bloque,
   .calendar {
     width: 75%;

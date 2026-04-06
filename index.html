@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación XV Años - Sara y Aime</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: #0f187A;
+      color: #EC9CD2;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .portal {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 40px auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .portal-border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #EC9CD2;
+      border-radius: 50%;
+      box-shadow: 0 0 40px #EC9CD2, 0 0 80px #EC9CD2;
+      animation: spin 6s linear infinite, glow 2s ease-in-out infinite alternate;
+    }
+
+    .portal img {
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px #EC9CD2; }
+      to { box-shadow: 0 0 60px #EC9CD2; }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin: 10px 0;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .button {
+      background-color: transparent;
+      border: 2px solid gold;
+      color: gold;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+    .button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    .calendar,
+    .bloque {
+      background: #0a0a2a;
+      color: #EC9CD2;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 20px #EC9CD2;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .calendar th,
+    .calendar td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .highlight {
+      background: #EC9CD2;
+      color: black;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .countdown {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .codigo-vestimenta img {
+      width: 220px;
+      max-width: 80%;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #EC9CD2;
+    }
+   .flores {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.flores img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.izquierda {
+  left: 0;
+}
+
+.derecha {
+  right: 0;
+}
+
+.derecha img {
+  transform: scaleX(-1);
+}
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .flores {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+  }
+
+  /* TODO tu CSS normal va arriba */
+
+  /* 👇 PEGA AQUÍ EL CSS PARA CELULAR */
+  @media (max-width: 768px) {
+    .flores {
+      display: none;
+    }
+
+    .bloque,
+    .calendar {
+      width: 88%;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    .portal {
+      width: 180px;
+      height: 180px;
+    }
+  }
+</style>
+
+  </style>
+</head>
+
+<body>
+
+<div class="flores izquierda">
+  <img src="florin.png" alt="Flores lado izquierdo">
+</div>
+
+<div class="flores derecha">
+  <img src="florin.png" alt="Flores lado derecho">
+</div>
+
+
+  <!-- Imagen -->
+  <div class="portal">
+    <div class="portal-border"></div>
+    <img src="invitacion.jpg" alt="Imagen dentro del portal">
+  </div>
+
+  <!-- Título -->
+  <div class="section">
+    <p class="subtitle">Mis XV años</p>
+    <h1>Sara Abigail Ortega Beas</h1>
+    <h2>Aime Ortega Beas</h2>
+  </div>
+
+  <!-- Música -->
+  <div class="bloque">
+    <h2>Dale Play 🎶</h2>
+    <audio controls loop>
+      <source src="inviCancion.mpeg" type="audio/mpeg">
+      Tu navegador no soporta audio.
+  </div>
+
+  <!-- Mensaje -->
+  <div class="bloque">
+    <p>
+      “Dicen que la vida es como un cuento, y hoy comienza un capítulo que he esperado por mucho tiempo.
+      Seré princesa por una noche, rodeada de amor, música y sueños.
+      Tú estás en las páginas más bonitas de mi historia... ¿me acompañas a seguir escribiéndola?”
+    </p>
+    <p><strong>Te invitamos a celebrar</strong></p>
+  </div>
+
+ <div class="calendar">
+  <h3>El Gran Día</h3>
+  <p>Viernes 29 de Mayo 2026</p>
+
+  <table>
+    <tr>
+      <th>Dom</th>
+      <th>Lun</th>
+      <th>Mar</th>
+      <th>Mié</th>
+      <th>Jue</th>
+      <th>Vie</th>
+      <th>Sáb</th>
+    </tr>
+
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+    </tr>
+    <tr>
+      <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+    </tr>
+    <tr>
+      <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+    </tr>
+    <tr>
+      <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+    </tr>
+    <tr>
+      <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+      <td class="highlight">29</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>31</td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </table>
+
+  <div class="countdown" id="countdown"></div>
+</div>
+
+  <!-- Recepción -->
+  <div class="bloque">
+    <h2>Recepción</h2>
+    <p>📍 Calle Rafael Molina #3944, Guadalajara, México</p>
+  </div>
+
+  <!-- Ver ubicación -->
+  <div class="section">
+    <a href="https://maps.app.goo.gl/hbZYiU3p8L4cJ7Dh6" target="_blank" class="button">
+      Ver Ubicación 📍
+    </a>
+  </div>
+
+  <!-- Regalo -->
+  <div class="bloque">
+    <p>
+      El regalo es opcional, la asistencia es importante.
+      Si deseas tener un detalle conmigo, una lluvia de sobres será bien recibida 💌
+    </p>
+  </div>
+
+  <!-- Confirmar asistencia -->
+  <div class="section">
+    <a href="https://wa.me/5213312345678?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Sara%20y%20Aime"
+       target="_blank"
+       class="button">
+      Confirmar Asistencia ✅
+    </a>
+  </div>
+
+  <!-- Código de vestimenta -->
+  <div class="bloque codigo-vestimenta">
+    <h2>Código de Vestimenta</h2>
+    <img src="vestimenta.png" alt="Código de vestimenta">
+    <p>Los colores lila, azul marino y azul rey están reservados para las quinceañeras</p>
+  </div>
+
+  <!-- Mensaje final -->
+  <div class="bloque">
+    <p>Me despido de la niñez y doy la bienvenida a mis sueños.</p>
+    <p>Gracias por acompañarme en este momento inolvidable.</p>
+    <p><strong>No faltes, te esperamos.</strong></p>
+  </div>
+
+  <script>
+    const targetDate = new Date("2026-05-29T19:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML =
+          "¡El gran día ha llegado!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `Faltan ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>

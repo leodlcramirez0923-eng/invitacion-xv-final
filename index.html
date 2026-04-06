@@ -149,10 +149,11 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 220px;
-  z-index: 0;
+  width: 180px;
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  opacity: 0.85;
 }
 
 .flores img {
@@ -172,48 +173,19 @@
 .derecha img {
   transform: scaleX(-1);
 }
-  body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-  }
-
+@media (max-width: 768px) {
   .flores {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 220px;
+    width: 70px;
+    opacity: 0.55;
+    z-index: -1;
   }
 
-  /* TODO tu CSS normal va arriba */
-
-  /* 👇 PEGA AQUÍ EL CSS PARA CELULAR */
-  @media (max-width: 768px) {
-    .flores {
-      display: none;
-    }
-
-    .bloque,
-    .calendar {
-      width: 88%;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 2.2em;
-    }
-
-    h2 {
-      font-size: 2em;
-    }
-
-    .portal {
-      width: 180px;
-      height: 180px;
-    }
+  .flores img {
+    height: 100%;
   }
+    
 </style>
 
-  </style>
 </head>
 
 <body>
